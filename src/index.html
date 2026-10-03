@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio introductorio sobre arquitectura de software: conceptos, capas y tipos de arquitectura.">
+  <meta name="author" content="Noe Santiago">
+  <title>Arquitectura de Software - Inicio</title>
+</head>
+<body>
+
+  <header>
+    <h1>Arquitectura de Software</h1>
+    <p>Aprende cómo se organizan y estructuran los sistemas de software.</p>
+
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="conceptos.html">Conceptos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <main>
+
+    <section id="que-es">
+      <h2>¿Qué es la arquitectura de software?</h2>
+      <p>
+        La <strong>arquitectura de software</strong> es la forma en que se organiza y estructura
+        un sistema. Define sus <em>componentes</em> principales, la relación entre ellos y las
+        reglas que permiten que el sistema funcione correctamente.
+      </p>
+
+      <blockquote cite="https://www.iso.org/standard/74393.html">
+        <p>
+          "La arquitectura es la organización fundamental de un sistema, representada en sus
+          componentes, las relaciones entre ellos y con el entorno, y los principios que guían
+          su diseño y evolución."
+        </p>
+        <footer>— Definición basada en <cite>ISO/IEC/IEEE 42010</cite></footer>
+      </blockquote>
+    </section>
+
+    <section id="destacado">
+      <h2>Ejemplo destacado: arquitectura en capas</h2>
+      <figure>
+        <img src="assets/capas.svg" alt="Diagrama de tres capas: presentación, lógica de negocio y datos" width="420" height="260">
+        <figcaption>Figura 1. Una aplicación organizada en tres capas.</figcaption>
+      </figure>
+      <p>
+        Cada capa tiene una responsabilidad distinta y solo se comunica con la capa vecina.
+        Puedes ver más detalles en la página de <a href="conceptos.html#capas">conceptos</a>.
+      </p>
+    </section>
+
+    <section id="beneficios">
+      <h2>¿Para qué sirve?</h2>
+      <ol>
+        <li>Organizar mejor un sistema.</li>
+        <li>Facilitar el mantenimiento del software.</li>
+        <li>Permitir que el sistema pueda crecer.</li>
+        <li>Mejorar la comunicación entre componentes.</li>
+        <li>Facilitar el trabajo de los desarrolladores.</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <aside>
+    <h2>¿Sabías que...?</h2>
+    <p>
+      Un mal diseño de arquitectura puede costar mucho más que el desarrollo inicial,
+      porque cada cambio futuro se vuelve <mark>más lento y costoso</mark>.
+    </p>
+  </aside>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 - Noe Santiago</p>
+    <p><a href="#que-es">Volver arriba</a></p>
+  </footer>
+
+</body>
+</html>

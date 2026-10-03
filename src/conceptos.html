@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conceptos básicos de arquitectura de software: componentes, capas e interfaces.">
+  <meta name="author" content="Noe Santiago">
+  <title>Arquitectura de Software - Conceptos</title>
+</head>
+<body>
+
+  <header>
+    <h1>Conceptos básicos</h1>
+    <p>Las piezas fundamentales para entender cualquier arquitectura.</p>
+
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="conceptos.html" aria-current="page">Conceptos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <main>
+
+    <nav aria-label="Contenido de esta página">
+      <h2>En esta página</h2>
+      <ul>
+        <li><a href="#componentes">Componentes</a></li>
+        <li><a href="#capas">Capas</a></li>
+        <li><a href="#interfaces">Interfaces</a></li>
+        <li><a href="#glosario">Glosario</a></li>
+      </ul>
+    </nav>
+
+    <article id="componentes">
+      <h2>Componentes</h2>
+      <p>
+        Los componentes son las partes principales que forman un sistema de software.
+        Cada componente tiene una <strong>responsabilidad específica</strong>, por ejemplo:
+        gestionar usuarios, procesar pagos o enviar notificaciones.
+      </p>
+    </article>
+
+    <article id="capas">
+      <h2>Capas</h2>
+      <p>
+        Las capas permiten organizar el sistema según diferentes responsabilidades.
+        Una aplicación típica tiene tres:
+      </p>
+
+      <table border="1">
+        <caption>Las tres capas de una aplicación</caption>
+        <thead>
+          <tr>
+            <th scope="col">Capa</th>
+            <th scope="col">Responsabilidad</th>
+            <th scope="col">Ejemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Presentación</th>
+            <td>Mostrar información y recibir acciones del usuario.</td>
+            <td>Páginas web, pantallas de una app.</td>
+          </tr>
+          <tr>
+            <th scope="row">Lógica de negocio</th>
+            <td>Aplicar las reglas del sistema.</td>
+            <td>Calcular el total de una compra.</td>
+          </tr>
+          <tr>
+            <th scope="row">Datos</th>
+            <td>Guardar y recuperar información.</td>
+            <td>Base de datos MySQL o PostgreSQL.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article id="interfaces">
+      <h2>Interfaces</h2>
+      <p>
+        Las interfaces establecen una forma de comunicación entre componentes o sistemas.
+        Un ejemplo muy común es una <abbr title="Application Programming Interface">API</abbr>
+        que responde a peticiones como esta:
+      </p>
+      <pre><code>GET /api/usuarios/15
+Respuesta: { "id": 15, "nombre": "Ana" }</code></pre>
+    </article>
+
+    <section id="glosario">
+      <h2>Glosario</h2>
+      <dl>
+        <dt>Acoplamiento</dt>
+        <dd>Grado de dependencia entre dos componentes. Lo ideal es que sea bajo.</dd>
+
+        <dt>Cohesión</dt>
+        <dd>Qué tan relacionadas están las tareas dentro de un mismo componente. Lo ideal es que sea alta.</dd>
+
+        <dt>Escalabilidad</dt>
+        <dd>Capacidad del sistema para crecer y atender a más usuarios.</dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 - Noe Santiago</p>
+    <p><a href="#componentes">Volver arriba</a></p>
+  </footer>
+
+</body>
+</html>

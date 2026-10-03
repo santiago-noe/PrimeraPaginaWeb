@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto para consultas sobre arquitectura de software.">
+  <meta name="author" content="Noe Santiago">
+  <title>Arquitectura de Software - Contacto</title>
+</head>
+<body>
+
+  <header>
+    <h1>Contacto</h1>
+    <p>¿Tienes dudas o sugerencias sobre el tema? Escríbeme.</p>
+
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="conceptos.html">Conceptos</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <main>
+
+    <section id="datos">
+      <h2>Datos de contacto</h2>
+      <address>
+        Noe Santiago<br>
+        Correo: <a href="mailto:01sistemas2019@gmail.com">01sistemas2019@gmail.com</a><br>
+        Horario de respuesta: lunes a viernes, de <time datetime="09:00">9:00</time> a <time datetime="18:00">18:00</time>
+      </address>
+    </section>
+
+    <section id="formulario">
+      <h2>Envíame un mensaje</h2>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Tus datos</legend>
+
+          <p>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required>
+          </p>
+
+          <p>
+            <label for="correo">Correo electrónico:</label><br>
+            <input type="email" id="correo" name="correo" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tu consulta</legend>
+
+          <p>
+            <label for="tema">Tema:</label><br>
+            <select id="tema" name="tema">
+              <option value="capas">Arquitectura en capas</option>
+              <option value="cliente-servidor">Cliente-servidor</option>
+              <option value="monolitica">Monolítica</option>
+              <option value="microservicios">Microservicios</option>
+              <option value="otro">Otro</option>
+            </select>
+          </p>
+
+          <p>Nivel de conocimiento:</p>
+          <p>
+            <input type="radio" id="basico" name="nivel" value="basico" checked>
+            <label for="basico">Básico</label>
+            <input type="radio" id="intermedio" name="nivel" value="intermedio">
+            <label for="intermedio">Intermedio</label>
+            <input type="radio" id="avanzado" name="nivel" value="avanzado">
+            <label for="avanzado">Avanzado</label>
+          </p>
+
+          <p>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="5" cols="40" required></textarea>
+          </p>
+
+          <p>
+            <input type="checkbox" id="novedades" name="novedades">
+            <label for="novedades">Quiero recibir novedades por correo</label>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Enviar</button>
+          <button type="reset">Limpiar</button>
+        </p>
+      </form>
+    </section>
+
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 - Noe Santiago</p>
+    <p><a href="#datos">Volver arriba</a></p>
+  </footer>
+
+</body>
+</html>

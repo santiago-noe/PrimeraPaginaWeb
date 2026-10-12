@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Video con portada, formatos MP4 y WebM y subtítulos en español e inglés.">
+  <meta name="author" content="Noe Santiago">
+  <title>Video con subtítulos | Librería Entre Páginas</title>
+</head>
+<body>
+  <a href="#contenido">Ir al contenido principal</a>
+  <header id="inicio">
+    <p><a href="index.html">Librería Entre Páginas</a></p>
+    <p>Tu próxima lectura empieza aquí.</p>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="table.html">Catálogo</a></li>
+        <li><a href="conceptos.html">Pedidos</a></li>
+        <li><a href="form.html">Club de lectores</a></li>
+        <li><a href="video_basic.html">Video y audio</a></li>
+        <li><a href="video_adv.html" aria-current="page">Video con subtítulos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <main id="contenido">
+    <h1>Una pausa con subtítulos</h1>
+    <p>El mismo clip de naturaleza, con una portada y mensajes en dos idiomas.</p>
+    <section aria-labelledby="titulo-video">
+      <h2 id="titulo-video">Tu próxima lectura empieza con una pausa</h2>
+      <p id="nota-video">Este es un video de muestra. Los subtítulos son mensajes de acompañamiento escritos para la librería, no una transcripción de diálogo.</p>
+      <!-- Labs_video, paso 02: poster, source en MP4 y WebM, track en dos idiomas.
+           Paso 03: se pospone el reproductor personalizado porque requiere CSS y JavaScript. -->
+      <figure>
+        <video width="320" controls playsinline preload="metadata" poster="assets/media/portada-lectura.png" aria-describedby="nota-video">
+          <source src="assets/media/lectura-pausa.mp4" type="video/mp4">
+          <source src="assets/media/lectura-pausa.webm" type="video/webm">
+          <track src="assets/media/lectura-es.vtt" kind="subtitles" srclang="es" label="Español" default>
+          <track src="assets/media/lectura-en.vtt" kind="subtitles" srclang="en" label="English">
+          Tu navegador no admite video HTML5. <a href="assets/media/lectura-pausa.mp4">Abre el video MP4</a>.
+        </video>
+        <figcaption>Clip de naturaleza de MDN con portada y textos de Librería Entre Páginas.</figcaption>
+      </figure>
+      <p>Usa el menú de subtítulos del reproductor para elegir español o inglés.</p>
+      <!-- Para probar los subtítulos, servir el proyecto por HTTP con Live Server. -->
+      <details>
+        <summary>Leer los mensajes de los subtítulos</summary>
+        <p>Español: Una pausa de naturaleza para tu próxima lectura.</p>
+        <p lang="en">English: A moment of nature before your next read.</p>
+      </details>
+      <ul>
+        <li><a href="assets/media/lectura-pausa.mp4" download>Descargar el video MP4</a></li>
+        <li><a href="assets/media/lectura-pausa.webm" download>Descargar el video WebM</a></li>
+      </ul>
+      <p>Fuente: <a href="https://github.com/mdn/interactive-examples/tree/main/live-examples/media/cc0-videos">colección de videos CC0 de MDN</a>.</p>
+      <p><a href="video_basic.html#titulo-audio">Escuchar la bienvenida de la librería</a></p>
+    </section>
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 Librería Entre Páginas. Proyecto de Noe Santiago.</p>
+    <p>Prototipo de librería: catálogo y precios de ejemplo. Los formularios aún no procesan solicitudes.</p>
+    <p><a href="table.html">Explorar catálogo</a> · <a href="contacto.html">Contacto</a> · <a href="#inicio">Volver arriba</a></p>
+  </footer>
+</body>
+</html>

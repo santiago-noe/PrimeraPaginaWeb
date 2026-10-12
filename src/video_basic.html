@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Una pausa de naturaleza y un audio de bienvenida a Librería Entre Páginas.">
+  <meta name="author" content="Noe Santiago">
+  <title>Video y audio | Librería Entre Páginas</title>
+</head>
+<body>
+  <a href="#contenido">Ir al contenido principal</a>
+  <header id="inicio">
+    <p><a href="index.html">Librería Entre Páginas</a></p>
+    <p>Tu próxima lectura empieza aquí.</p>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="table.html">Catálogo</a></li>
+        <li><a href="conceptos.html">Pedidos</a></li>
+        <li><a href="form.html">Club de lectores</a></li>
+        <li><a href="video_basic.html" aria-current="page">Video y audio</a></li>
+        <li><a href="video_adv.html">Video con subtítulos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <main id="contenido">
+    <h1>Una pausa entre páginas</h1>
+    <p>Un breve momento de naturaleza antes de elegir tu próxima lectura.</p>
+    <section aria-labelledby="titulo-video">
+      <h2 id="titulo-video">Video para una pausa</h2>
+      <p id="descripcion-video">Clip de naturaleza utilizado como muestra; no representa imágenes de nuestra librería.</p>
+      <!-- Labs_video, paso 01: video con src, width, controls y texto alternativo. -->
+      <figure>
+        <video src="assets/media/lectura-pausa.mp4" width="320" controls playsinline preload="metadata" aria-describedby="descripcion-video">
+          Tu navegador no admite video HTML5. <a href="assets/media/lectura-pausa.mp4">Abre el video MP4</a>.
+        </video>
+        <figcaption>Video de muestra de MDN, distribuido en su colección CC0.</figcaption>
+      </figure>
+      <p><a href="assets/media/lectura-pausa.mp4" download>Descargar el video MP4</a></p>
+      <p><a href="video_adv.html">Ver la versión con portada y subtítulos</a></p>
+    </section>
+    <section aria-labelledby="titulo-audio">
+      <h2 id="titulo-audio">Te damos la bienvenida</h2>
+      <p>Presentación de la librería con una voz sintetizada en español.</p>
+      <figure>
+        <audio controls preload="metadata" aria-label="Bienvenida a Librería Entre Páginas">
+          <source src="assets/media/bienvenida.wav" type="audio/wav">
+          Tu navegador no admite audio HTML5. <a href="assets/media/bienvenida.wav">Abre el audio de bienvenida</a>.
+        </audio>
+        <figcaption>Audio original de demostración, generado para este proyecto.</figcaption>
+      </figure>
+      <p><a href="assets/media/bienvenida.wav" download>Descargar el audio</a></p>
+      <details open>
+        <summary>Leer la transcripción del audio</summary>
+        <p>Bienvenido a Librería Entre Páginas. Descubre libros de programación, tecnología e historia de la web. Explora el catálogo, elige tu próxima lectura y prepara una solicitud de pedido. Esta es una demostración de nuestra futura librería.</p>
+      </details>
+    </section>
+    <aside aria-labelledby="titulo-siguiente">
+      <h2 id="titulo-siguiente">¿Listo para elegir un libro?</h2>
+      <p><a href="table.html">Explora el catálogo</a> o <a href="form.html">conoce el club de lectores</a>.</p>
+      <p>Fuente del clip: <a href="https://github.com/mdn/interactive-examples/tree/main/live-examples/media/cc0-videos">colección de videos CC0 de MDN</a>.</p>
+    </aside>
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 Librería Entre Páginas. Proyecto de Noe Santiago.</p>
+    <p>Prototipo de librería: catálogo y precios de ejemplo. Los formularios aún no procesan solicitudes.</p>
+    <p><a href="table.html">Explorar catálogo</a> · <a href="contacto.html">Contacto</a> · <a href="#inicio">Volver arriba</a></p>
+  </footer>
+</body>
+</html>

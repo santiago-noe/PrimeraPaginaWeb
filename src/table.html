@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de libros de programación y tecnología con autores, categorías y precios de ejemplo en soles.">
+  <meta name="author" content="Noe Santiago">
+  <title>Catálogo de libros | Librería Entre Páginas</title>
+</head>
+<body>
+  <a href="#contenido">Ir al contenido principal</a>
+  <header id="inicio">
+    <p><a href="index.html">Librería Entre Páginas</a></p>
+    <p>Tu próxima lectura empieza aquí.</p>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="table.html" aria-current="page">Catálogo</a></li>
+        <li><a href="conceptos.html">Pedidos</a></li>
+        <li><a href="form.html">Club de lectores</a></li>
+        <li><a href="video_basic.html">Video y audio</a></li>
+        <li><a href="video_adv.html">Video con subtítulos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <main id="contenido">
+    <h1>Catálogo de libros</h1>
+    <p>Compara los títulos y encuentra tu próxima lectura.</p>
+    <section aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo">Nuestra selección inicial</h2>
+      <p id="nota-precios">Precios de ejemplo en soles peruanos (<abbr title="Sol peruano">PEN</abbr>).
+        La disponibilidad, edición y precio final se confirmarán en la versión operativa.</p>
+      <!-- Guías Labs_tabla y Labs_tabla (1): tabla, tr, td, th, thead, tbody, tfoot, colspan y caption.
+           Se adapta la moneda al producto; la ordenación con JavaScript queda pendiente. -->
+      <table aria-describedby="nota-precios">
+        <caption>Libros de programación, tecnología e historia de la web</caption>
+        <thead>
+          <tr>
+            <th scope="col">Título del libro</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Categoría</th>
+            <th scope="col">Precio de ejemplo</th>
+            <th scope="col">Pedido</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="libro-c">
+            <td lang="en">The C Programming Language</td>
+            <td>Dennis Ritchie y Brian Kernighan</td>
+            <td>Programación</td>
+            <td>S/ 45.00</td>
+            <td><a href="conceptos.html#solicitud">Solicitar este título</a></td>
+          </tr>
+          <tr id="libro-cpp">
+            <td lang="en">The C++ Programming Language</td>
+            <td>Bjarne Stroustrup</td>
+            <td>Programación</td>
+            <td>S/ 65.00</td>
+            <td><a href="conceptos.html#solicitud">Solicitar este título</a></td>
+          </tr>
+          <tr id="libro-audio">
+            <td lang="en">Build AI-Enhanced Audio Plugins</td>
+            <td>Matthew Yee-King</td>
+            <td>Tecnología</td>
+            <td>S/ 80.00</td>
+            <td><a href="conceptos.html#solicitud">Solicitar este título</a></td>
+          </tr>
+          <tr id="libro-web">
+            <td lang="en">Weaving the Web</td>
+            <td>Tim Berners-Lee</td>
+            <td>Historia de la web</td>
+            <td>S/ 55.00</td>
+            <td><a href="conceptos.html#solicitud">Solicitar este título</a></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="3">Total de referencia: un ejemplar de cada título</th>
+            <td>S/ 245.00</td>
+            <td>4 libros</td>
+          </tr>
+        </tfoot>
+      </table>
+      <p>El total corresponde al conjunto completo del catálogo; no es un carrito de compras.</p>
+    </section>
+    <section aria-labelledby="titulo-no-encuentras">
+      <h2 id="titulo-no-encuentras">¿Buscas otro libro?</h2>
+      <p>Cuéntanos el título y el autor para preparar una consulta de disponibilidad.</p>
+      <p><a href="contacto.html#consulta">Consultar por un libro</a></p>
+    </section>
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 Librería Entre Páginas. Proyecto de Noe Santiago.</p>
+    <p>Prototipo de librería: catálogo y precios de ejemplo. Los formularios aún no procesan solicitudes.</p>
+    <p><a href="table.html">Explorar catálogo</a> · <a href="contacto.html">Contacto</a> · <a href="#inicio">Volver arriba</a></p>
+  </footer>
+</body>
+</html>

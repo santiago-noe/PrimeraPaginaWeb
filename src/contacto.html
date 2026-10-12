@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contacto para consultas sobre arquitectura de software.">
+  <meta name="description" content="Consulta sobre títulos, disponibilidad o el proyecto Librería Entre Páginas.">
   <meta name="author" content="Noe Santiago">
-  <title>Arquitectura de Software - Contacto</title>
+  <title>Contacto | Librería Entre Páginas</title>
 </head>
 <body>
-
-  <header>
-    <h1>Contacto</h1>
-    <p>¿Tienes dudas o sugerencias sobre el tema? Escríbeme.</p>
-
+  <a href="#contenido">Ir al contenido principal</a>
+  <header id="inicio">
+    <p><a href="index.html">Librería Entre Páginas</a></p>
+    <p>Tu próxima lectura empieza aquí.</p>
     <nav aria-label="Menú principal">
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="conceptos.html">Conceptos</a></li>
+        <li><a href="table.html">Catálogo</a></li>
+        <li><a href="conceptos.html">Pedidos</a></li>
+        <li><a href="form.html">Club de lectores</a></li>
+        <li><a href="video_basic.html">Video y audio</a></li>
+        <li><a href="video_adv.html">Video con subtítulos</a></li>
         <li><a href="contacto.html" aria-current="page">Contacto</a></li>
       </ul>
     </nav>
@@ -24,85 +27,68 @@
 
   <hr>
 
-  <main>
-
-    <section id="datos">
-      <h2>Datos de contacto</h2>
+  <main id="contenido">
+    <h1>Conversemos sobre tu próxima lectura</h1>
+    <p>¿Buscas un título específico o tienes una sugerencia para la librería?</p>
+    <section aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto del proyecto</h2>
       <address>
-        Noe Santiago<br>
-        Correo: <a href="mailto:01sistemas2019@gmail.com">01sistemas2019@gmail.com</a><br>
-        Horario de respuesta: lunes a viernes, de <time datetime="09:00">9:00</time> a <time datetime="18:00">18:00</time>
+        Responsable: Noe Santiago<br>
+        Correo: <a href="mailto:01sistemas2019@gmail.com">01sistemas2019@gmail.com</a>
       </address>
+      <p>La ubicación, los horarios y las modalidades de atención de la librería se definirán antes de su lanzamiento.</p>
     </section>
-
-    <section id="formulario">
-      <h2>Envíame un mensaje</h2>
-
-      <form action="#" method="post">
+    <section id="consulta" aria-labelledby="titulo-consulta">
+      <h2 id="titulo-consulta">Déjanos tu consulta</h2>
+      <p id="aviso-contacto">Formulario de demostración: los mensajes todavía no se envían ni se guardan.</p>
+      <form action="/submit" method="post" aria-describedby="aviso-contacto">
         <fieldset>
           <legend>Tus datos</legend>
-
           <p>
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" required>
+            <label for="nombre">Nombre (obligatorio):</label><br>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
           </p>
-
           <p>
-            <label for="correo">Correo electrónico:</label><br>
-            <input type="email" id="correo" name="correo" required>
+            <label for="correo">Correo electrónico (obligatorio):</label><br>
+            <input type="email" id="correo" name="correo" autocomplete="email" required>
           </p>
         </fieldset>
-
         <fieldset>
           <legend>Tu consulta</legend>
-
           <p>
-            <label for="tema">Tema:</label><br>
+            <label for="tema">¿En qué podemos ayudarte?</label><br>
             <select id="tema" name="tema">
-              <option value="capas">Arquitectura en capas</option>
-              <option value="cliente-servidor">Cliente-servidor</option>
-              <option value="monolitica">Monolítica</option>
-              <option value="microservicios">Microservicios</option>
-              <option value="otro">Otro</option>
+              <option value="disponibilidad">Busco un libro</option>
+              <option value="pedido">Consulta sobre un pedido</option>
+              <option value="club">Club de lectores</option>
+              <option value="sugerencia">Sugerencia</option>
+              <option value="otro">Otro tema</option>
             </select>
           </p>
-
-          <p>Nivel de conocimiento:</p>
           <p>
-            <input type="radio" id="basico" name="nivel" value="basico" checked>
-            <label for="basico">Básico</label>
-            <input type="radio" id="intermedio" name="nivel" value="intermedio">
-            <label for="intermedio">Intermedio</label>
-            <input type="radio" id="avanzado" name="nivel" value="avanzado">
-            <label for="avanzado">Avanzado</label>
-          </p>
-
-          <p>
-            <label for="mensaje">Mensaje:</label><br>
+            <label for="mensaje">Mensaje (obligatorio):</label><br>
             <textarea id="mensaje" name="mensaje" rows="5" cols="40" required></textarea>
           </p>
-
-          <p>
-            <input type="checkbox" id="novedades" name="novedades">
-            <label for="novedades">Quiero recibir novedades por correo</label>
-          </p>
         </fieldset>
-
         <p>
-          <button type="submit">Enviar</button>
-          <button type="reset">Limpiar</button>
+          <button type="submit">Enviar consulta</button>
+          <button type="reset">Restablecer mensaje</button>
         </p>
       </form>
+      <p>El destino de envío es un marcador de posición y aún no está habilitado.</p>
     </section>
-
+    <aside aria-labelledby="titulo-pedido">
+      <h2 id="titulo-pedido">¿Ya elegiste un libro?</h2>
+      <p><a href="conceptos.html">Completa la solicitud de pedido</a> con el título y la cantidad que necesitas.</p>
+    </aside>
   </main>
 
   <hr>
 
   <footer>
-    <p>&copy; 2026 - Noe Santiago</p>
-    <p><a href="#datos">Volver arriba</a></p>
+    <p>&copy; 2026 Librería Entre Páginas. Proyecto de Noe Santiago.</p>
+    <p>Prototipo de librería: catálogo y precios de ejemplo. Los formularios aún no procesan solicitudes.</p>
+    <p><a href="table.html">Explorar catálogo</a> · <a href="contacto.html">Contacto</a> · <a href="#inicio">Volver arriba</a></p>
   </footer>
-
 </body>
 </html>

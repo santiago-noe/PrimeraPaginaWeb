@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sitio introductorio sobre arquitectura de software: conceptos, capas y tipos de arquitectura.">
+  <meta name="description" content="Descubre el catálogo de Librería Entre Páginas, prepara tu pedido y explora nuestro club de lectores.">
   <meta name="author" content="Noe Santiago">
-  <title>Arquitectura de Software - Inicio</title>
+  <title>Inicio | Librería Entre Páginas</title>
 </head>
 <body>
-
-  <header>
-    <h1>Arquitectura de Software</h1>
-    <p>Aprende cómo se organizan y estructuran los sistemas de software.</p>
-
+  <a href="#contenido">Ir al contenido principal</a>
+  <header id="inicio">
+    <p><a href="index.html">Librería Entre Páginas</a></p>
+    <p>Tu próxima lectura empieza aquí.</p>
     <nav aria-label="Menú principal">
       <ul>
         <li><a href="index.html" aria-current="page">Inicio</a></li>
-        <li><a href="conceptos.html">Conceptos</a></li>
+        <li><a href="table.html">Catálogo</a></li>
+        <li><a href="conceptos.html">Pedidos</a></li>
+        <li><a href="form.html">Club de lectores</a></li>
+        <li><a href="video_basic.html">Video y audio</a></li>
+        <li><a href="video_adv.html">Video con subtítulos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -24,65 +27,78 @@
 
   <hr>
 
-  <main>
-
-    <section id="que-es">
-      <h2>¿Qué es la arquitectura de software?</h2>
-      <p>
-        La <strong>arquitectura de software</strong> es la forma en que se organiza y estructura
-        un sistema. Define sus <em>componentes</em> principales, la relación entre ellos y las
-        reglas que permiten que el sistema funcione correctamente.
-      </p>
-
-      <blockquote cite="https://www.iso.org/standard/74393.html">
-        <p>
-          "La arquitectura es la organización fundamental de un sistema, representada en sus
-          componentes, las relaciones entre ellos y con el entorno, y los principios que guían
-          su diseño y evolución."
-        </p>
-        <footer>— Definición basada en <cite>ISO/IEC/IEEE 42010</cite></footer>
-      </blockquote>
+  <main id="contenido">
+    <section aria-labelledby="titulo-portada">
+      <p>Libros para aprender, explorar y crear</p>
+      <h1 id="titulo-portada">Encuentra el libro que acompañará tu próxima idea</h1>
+      <p>Explora nuestra selección de programación, tecnología e historia de la web.
+        Consulta los precios y prepara una solicitud con los títulos que te interesen.</p>
+      <p><a href="table.html">Ver catálogo de libros</a></p>
+      <p><a href="conceptos.html">Preparar un pedido</a></p>
     </section>
 
-    <section id="destacado">
-      <h2>Ejemplo destacado: arquitectura en capas</h2>
-      <figure>
-        <img src="assets/capas.svg" alt="Diagrama de tres capas: presentación, lógica de negocio y datos" width="420" height="260">
-        <figcaption>Figura 1. Una aplicación organizada en tres capas.</figcaption>
-      </figure>
-      <p>
-        Cada capa tiene una responsabilidad distinta y solo se comunica con la capa vecina.
-        Puedes ver más detalles en la página de <a href="conceptos.html#capas">conceptos</a>.
-      </p>
+    <section aria-labelledby="titulo-destacados">
+      <h2 id="titulo-destacados">Una selección para mentes curiosas</h2>
+      <p>Estos títulos forman parte del catálogo inicial. Los precios en soles son ilustrativos.</p>
+      <article>
+        <h3 lang="en">The C Programming Language</h3>
+        <p>Dennis Ritchie y Brian Kernighan · Programación</p>
+        <p>Un título para quienes quieren explorar el lenguaje C.</p>
+        <p><strong>Precio de ejemplo: S/ 45.00</strong></p>
+        <a href="table.html#libro-c">Ver en el catálogo</a>
+      </article>
+      <article>
+        <h3 lang="en">Weaving the Web</h3>
+        <p>Tim Berners-Lee · Historia de la web</p>
+        <p>Una lectura para quienes sienten curiosidad por la historia de la web.</p>
+        <p><strong>Precio de ejemplo: S/ 55.00</strong></p>
+        <a href="table.html#libro-web">Ver en el catálogo</a>
+      </article>
     </section>
 
-    <section id="beneficios">
-      <h2>¿Para qué sirve?</h2>
+    <section aria-labelledby="titulo-categorias">
+      <h2 id="titulo-categorias">¿Qué te gustaría leer?</h2>
+      <ul>
+        <li><strong>Programación:</strong> descubre títulos sobre C y C++.</li>
+        <li><strong>Tecnología:</strong> explora libros sobre herramientas y creación digital.</li>
+        <li><strong>Historia de la web:</strong> conoce otra perspectiva del mundo conectado.</li>
+      </ul>
+      <p><a href="table.html">Consultar todos los títulos</a></p>
+    </section>
+
+    <section aria-labelledby="titulo-pasos">
+      <h2 id="titulo-pasos">De la curiosidad a tu próximo libro</h2>
       <ol>
-        <li>Organizar mejor un sistema.</li>
-        <li>Facilitar el mantenimiento del software.</li>
-        <li>Permitir que el sistema pueda crecer.</li>
-        <li>Mejorar la comunicación entre componentes.</li>
-        <li>Facilitar el trabajo de los desarrolladores.</li>
+        <li>Revisa los títulos, autores y precios en el catálogo.</li>
+        <li>Elige un libro y completa los datos de tu solicitud.</li>
+        <li>En la versión operativa, confirmaremos disponibilidad y entrega antes de cualquier pago.</li>
       </ol>
+      <p><mark>Estamos construyendo la librería.</mark> En esta versión puedes recorrer las páginas
+        y completar los formularios; los pedidos todavía no se registran.</p>
     </section>
 
-  </main>
+    <section id="multimedia" aria-labelledby="titulo-multimedia">
+      <h2 id="titulo-multimedia">Una pausa entre páginas</h2>
+      <p>Escucha nuestra bienvenida y descubre un breve video de naturaleza como muestra de nuestro espacio multimedia.</p>
+      <ul>
+        <li><a href="video_basic.html">Ver el video y escuchar la bienvenida</a></li>
+        <li><a href="video_adv.html">Ver el video con subtítulos en español o inglés</a></li>
+      </ul>
+    </section>
 
-  <aside>
-    <h2>¿Sabías que...?</h2>
-    <p>
-      Un mal diseño de arquitectura puede costar mucho más que el desarrollo inicial,
-      porque cada cambio futuro se vuelve <mark>más lento y costoso</mark>.
-    </p>
-  </aside>
+    <aside aria-labelledby="titulo-club">
+      <h2 id="titulo-club">Dale un lugar a tus próximas lecturas</h2>
+      <p>El club de lectores reúne tus intereses, metas y sugerencias de libros en un solo formulario.</p>
+      <p><a href="form.html">Explorar el club de lectores</a></p>
+    </aside>
+  </main>
 
   <hr>
 
   <footer>
-    <p>&copy; 2026 - Noe Santiago</p>
-    <p><a href="#que-es">Volver arriba</a></p>
+    <p>&copy; 2026 Librería Entre Páginas. Proyecto de Noe Santiago.</p>
+    <p>Prototipo de librería: catálogo y precios de ejemplo. Los formularios aún no procesan solicitudes.</p>
+    <p><a href="table.html">Explorar catálogo</a> · <a href="contacto.html">Contacto</a> · <a href="#inicio">Volver arriba</a></p>
   </footer>
-
 </body>
 </html>

@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conceptos básicos de arquitectura de software: componentes, capas e interfaces.">
+  <meta name="description" content="Prepara una solicitud de libros con título, cantidad, contacto y preferencias de entrega.">
   <meta name="author" content="Noe Santiago">
-  <title>Arquitectura de Software - Conceptos</title>
+  <title>Solicitar un pedido | Librería Entre Páginas</title>
 </head>
 <body>
-
-  <header>
-    <h1>Conceptos básicos</h1>
-    <p>Las piezas fundamentales para entender cualquier arquitectura.</p>
-
+  <a href="#contenido">Ir al contenido principal</a>
+  <header id="inicio">
+    <p><a href="index.html">Librería Entre Páginas</a></p>
+    <p>Tu próxima lectura empieza aquí.</p>
     <nav aria-label="Menú principal">
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="conceptos.html" aria-current="page">Conceptos</a></li>
+        <li><a href="table.html">Catálogo</a></li>
+        <li><a href="conceptos.html" aria-current="page">Pedidos</a></li>
+        <li><a href="form.html">Club de lectores</a></li>
+        <li><a href="video_basic.html">Video y audio</a></li>
+        <li><a href="video_adv.html">Video con subtítulos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -24,96 +27,98 @@
 
   <hr>
 
-  <main>
-
-    <nav aria-label="Contenido de esta página">
-      <h2>En esta página</h2>
-      <ul>
-        <li><a href="#componentes">Componentes</a></li>
-        <li><a href="#capas">Capas</a></li>
-        <li><a href="#interfaces">Interfaces</a></li>
-        <li><a href="#glosario">Glosario</a></li>
-      </ul>
-    </nav>
-
-    <article id="componentes">
-      <h2>Componentes</h2>
-      <p>
-        Los componentes son las partes principales que forman un sistema de software.
-        Cada componente tiene una <strong>responsabilidad específica</strong>, por ejemplo:
-        gestionar usuarios, procesar pagos o enviar notificaciones.
-      </p>
-    </article>
-
-    <article id="capas">
-      <h2>Capas</h2>
-      <p>
-        Las capas permiten organizar el sistema según diferentes responsabilidades.
-        Una aplicación típica tiene tres:
-      </p>
-
-      <table border="1">
-        <caption>Las tres capas de una aplicación</caption>
-        <thead>
-          <tr>
-            <th scope="col">Capa</th>
-            <th scope="col">Responsabilidad</th>
-            <th scope="col">Ejemplo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Presentación</th>
-            <td>Mostrar información y recibir acciones del usuario.</td>
-            <td>Páginas web, pantallas de una app.</td>
-          </tr>
-          <tr>
-            <th scope="row">Lógica de negocio</th>
-            <td>Aplicar las reglas del sistema.</td>
-            <td>Calcular el total de una compra.</td>
-          </tr>
-          <tr>
-            <th scope="row">Datos</th>
-            <td>Guardar y recuperar información.</td>
-            <td>Base de datos MySQL o PostgreSQL.</td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
-
-    <article id="interfaces">
-      <h2>Interfaces</h2>
-      <p>
-        Las interfaces establecen una forma de comunicación entre componentes o sistemas.
-        Un ejemplo muy común es una <abbr title="Application Programming Interface">API</abbr>
-        que responde a peticiones como esta:
-      </p>
-      <pre><code>GET /api/usuarios/15
-Respuesta: { "id": 15, "nombre": "Ana" }</code></pre>
-    </article>
-
-    <section id="glosario">
-      <h2>Glosario</h2>
-      <dl>
-        <dt>Acoplamiento</dt>
-        <dd>Grado de dependencia entre dos componentes. Lo ideal es que sea bajo.</dd>
-
-        <dt>Cohesión</dt>
-        <dd>Qué tan relacionadas están las tareas dentro de un mismo componente. Lo ideal es que sea alta.</dd>
-
-        <dt>Escalabilidad</dt>
-        <dd>Capacidad del sistema para crecer y atender a más usuarios.</dd>
-      </dl>
+  <main id="contenido">
+    <h1>Prepara tu pedido</h1>
+    <p>Elige un título del catálogo y cuéntanos cómo te gustaría recibirlo.</p>
+    <section id="solicitud" aria-labelledby="titulo-solicitud">
+      <h2 id="titulo-solicitud">Solicitud de un libro</h2>
+      <p id="aviso-pedido">Prototipo: esta solicitud aún no se envía ni se guarda. Usa datos de ejemplo.
+        No se realiza ningún cobro.</p>
+      <p>Los campos indicados como obligatorios deben completarse.</p>
+      <!-- Marcador de posición. Conectar a un servidor en una etapa posterior. -->
+      <form action="/submit" method="post" aria-describedby="aviso-pedido">
+        <fieldset>
+          <legend>Datos de contacto</legend>
+          <p>
+            <label for="nombre">Nombre completo (obligatorio):</label><br>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          </p>
+          <p>
+            <label for="correo">Correo electrónico (obligatorio):</label><br>
+            <input type="email" id="correo" name="correo" autocomplete="email" required>
+          </p>
+          <p>
+            <label for="telefono">Teléfono de contacto (opcional):</label><br>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Tu libro</legend>
+          <p>
+            <label for="libro">Título (obligatorio):</label><br>
+            <select id="libro" name="libro" required>
+              <option value="" selected disabled>Selecciona un libro</option>
+                <option value="c">The C Programming Language</option>
+                <option value="cpp">The C++ Programming Language</option>
+                <option value="audio">Build AI-Enhanced Audio Plugins</option>
+                <option value="web">Weaving the Web</option>
+            </select>
+          </p>
+          <p>
+            <label for="cantidad">Cantidad de ejemplares (obligatorio):</label><br>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="20" step="1" value="1" required>
+          </p>
+          <p><a href="table.html">Volver a consultar precios</a></p>
+        </fieldset>
+        <fieldset>
+          <legend>Preferencias de entrega</legend>
+          <p>Selecciona una modalidad (obligatorio):</p>
+          <p>
+            <input type="radio" id="recojo" name="entrega" value="recojo" required>
+            <label for="recojo">Recojo coordinado</label><br>
+            <input type="radio" id="envio" name="entrega" value="envio">
+            <label for="envio">Envío por coordinar</label>
+          </p>
+          <p>
+            <label for="fecha">Fecha preferida (opcional):</label><br>
+            <input type="date" id="fecha" name="fecha" aria-describedby="nota-fecha">
+          </p>
+          <p id="nota-fecha">La fecha y el costo de entrega estarán sujetos a confirmación.</p>
+          <p>
+            <label for="comentarios">Indicaciones o títulos adicionales:</label><br>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea>
+          </p>
+        </fieldset>
+        <p>
+          <input type="checkbox" id="confirmacion" name="confirmacion" value="aceptada" required>
+          <label for="confirmacion">Entiendo que esto es una solicitud de disponibilidad, no una compra confirmada (obligatorio).</label>
+        </p>
+        <p>
+          <button type="submit">Enviar solicitud de pedido</button>
+          <button type="reset">Restablecer solicitud</button>
+        </p>
+      </form>
+      <p>El envío apunta a un destino de ejemplo que todavía no está habilitado.</p>
     </section>
-
+    <section aria-labelledby="titulo-dudas">
+      <h2 id="titulo-dudas">Antes de solicitar</h2>
+      <details>
+        <summary>¿Puedo pagar desde esta página?</summary>
+        <p>Los pagos se incorporarán después de implementar la gestión de pedidos. Esta página no solicita datos de pago.</p>
+      </details>
+      <details>
+        <summary>¿Puedo pedir varios títulos?</summary>
+        <p>Puedes indicar títulos adicionales en los comentarios. Más adelante incorporaremos un carrito con cantidades y totales.</p>
+      </details>
+    </section>
   </main>
 
   <hr>
 
   <footer>
-    <p>&copy; 2026 - Noe Santiago</p>
-    <p><a href="#componentes">Volver arriba</a></p>
+    <p>&copy; 2026 Librería Entre Páginas. Proyecto de Noe Santiago.</p>
+    <p>Prototipo de librería: catálogo y precios de ejemplo. Los formularios aún no procesan solicitudes.</p>
+    <p><a href="table.html">Explorar catálogo</a> · <a href="contacto.html">Contacto</a> · <a href="#inicio">Volver arriba</a></p>
   </footer>
-
 </body>
 </html>

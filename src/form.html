@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario del club de lectores con preferencias de lectura, metas, comentarios y sugerencias de títulos.">
+  <meta name="author" content="Noe Santiago">
+  <title>Club de lectores | Librería Entre Páginas</title>
+</head>
+<body>
+  <a href="#contenido">Ir al contenido principal</a>
+  <header id="inicio">
+    <p><a href="index.html">Librería Entre Páginas</a></p>
+    <p>Tu próxima lectura empieza aquí.</p>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="table.html">Catálogo</a></li>
+        <li><a href="conceptos.html">Pedidos</a></li>
+        <li><a href="form.html" aria-current="page">Club de lectores</a></li>
+        <li><a href="video_basic.html">Video y audio</a></li>
+        <li><a href="video_adv.html">Video con subtítulos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <main id="contenido">
+    <h1>Club de lectores</h1>
+    <p>Cuéntanos qué te gusta leer y qué libro quieres descubrir después.</p>
+    <section aria-labelledby="titulo-club">
+      <h2 id="titulo-club">Tu perfil lector</h2>
+      <p id="aviso-club">Inscripción de demostración: aún no se crea una cuenta ni se guardan datos.
+        Completa la prueba con información ficticia.</p>
+      <p>Solo el nombre, el correo y el comentario son obligatorios.</p>
+      <!-- Labs_form, pasos 01 y 02: texto, número, fecha, color, rango, archivo, contraseña y textarea.
+           Los controles se aplican al perfil del club. El paso de JavaScript queda pendiente. -->
+      <form action="/submit" method="post" enctype="multipart/form-data" aria-describedby="aviso-club">
+        <fieldset>
+          <legend>Datos de tu perfil</legend>
+          <p>
+            <label for="fullName">Nombre completo (obligatorio):</label><br>
+            <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+          </p>
+          <p>
+            <label for="email">Correo electrónico (obligatorio):</label><br>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </p>
+          <p>
+            <label for="age">Edad (opcional, de 0 a 120 años):</label><br>
+            <input type="number" id="age" name="age" min="0" max="120" step="1">
+          </p>
+          <p>
+            <label for="dob">Fecha de nacimiento (opcional):</label><br>
+            <input type="date" id="dob" name="dob">
+          </p>
+          <p>
+            <label for="password">Contraseña ficticia para tu perfil (opcional):</label><br>
+            <input type="password" id="password" name="password" autocomplete="new-password" aria-describedby="nota-password">
+          </p>
+          <p id="nota-password">Este campo representa una futura cuenta del club. Usa una contraseña inventada para esta prueba.</p>
+        </fieldset>
+        <fieldset>
+          <legend>Preferencias de lectura</legend>
+          <p>
+            <label for="categoria">Categoría favorita:</label><br>
+            <select id="categoria" name="categoria">
+              <option value="programacion">Programación</option>
+              <option value="tecnologia">Tecnología</option>
+              <option value="historia-web">Historia de la web</option>
+              <option value="otra">Otra</option>
+            </select>
+          </p>
+          <p>
+            <label for="meta">Meta de libros por mes:</label><br>
+            <input type="number" id="meta" name="meta" min="0" max="30" step="1" value="1">
+          </p>
+          <p>
+            <label for="color">Color favorito para un futuro separador de libros:</label><br>
+            <input type="color" id="color" name="color" value="#975b36">
+          </p>
+          <p>
+            <label for="rangeDemo">¿Qué tanto te interesa nuestra selección? (de 1 a 10):</label><br>
+            <input type="range" id="rangeDemo" name="rangeDemo" min="1" max="10" step="1" value="5" aria-describedby="nota-interes">
+          </p>
+          <p id="nota-interes">1 significa poco interés y 10 mucho interés. El valor inicial es 5.</p>
+          <p>
+            <label for="fileUpload">Foto de un libro que te gustaría encontrar (opcional):</label><br>
+            <input type="file" id="fileUpload" name="fileUpload" accept="image/*" aria-describedby="nota-archivo">
+          </p>
+          <p id="nota-archivo">Puedes seleccionar una imagen de prueba. Todavía no se sube a un servidor.</p>
+          <p>
+            <label for="comments">Cuéntanos qué te gustaría leer (obligatorio):</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="40" required></textarea>
+          </p>
+          <p>
+            <input type="checkbox" id="novedades" name="novedades" value="si">
+            <label for="novedades">Me gustaría recibir novedades cuando el club esté disponible.</label>
+          </p>
+        </fieldset>
+        <p>
+          <button type="submit">Solicitar inscripción al club</button>
+          <button type="reset">Restablecer perfil</button>
+        </p>
+      </form>
+      <p>El destino de envío aún no está implementado. Esta prueba no registra una inscripción.</p>
+    </section>
+  </main>
+
+  <hr>
+
+  <footer>
+    <p>&copy; 2026 Librería Entre Páginas. Proyecto de Noe Santiago.</p>
+    <p>Prototipo de librería: catálogo y precios de ejemplo. Los formularios aún no procesan solicitudes.</p>
+    <p><a href="table.html">Explorar catálogo</a> · <a href="contacto.html">Contacto</a> · <a href="#inicio">Volver arriba</a></p>
+  </footer>
+</body>
+</html>
